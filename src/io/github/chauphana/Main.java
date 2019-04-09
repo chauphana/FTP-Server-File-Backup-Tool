@@ -8,7 +8,7 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.net.ftp.FTP;
 import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPFile;
-
+import java.util.Scanner;
 
 
 public class Main {
@@ -17,9 +17,29 @@ public class Main {
 
         FTPClient client = new FTPClient();
         //https://stackoverflow.com/questions/11202215/how-to-copy-a-file-on-the-ftp-server-to-a-directory-on-the-same-server-in-java
+
+        String hostname = "";
+        String username = "";
+        String password = "";
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter hostname: ");
+        hostname = input.nextLine();
+
+        System.out.println("Enter Username: ");
+        username = input.nextLine();
+
+        System.out.println("Enter password (this is safe i swear): ");
+        password = input.nextLine();
+
+
+
         try {
-            client. connect("na47.pebblehost.com");
-            client.login("chauphana@outlook.com.75155", "209407880ac");
+//            client. connect(hostname);
+//            client.login(username, password);
+
+            client. connect(hostname);
+            client.login(username, password);
             System.out.println(client.getStatus());
             if (client.isConnected()) {
                 System.out.println("is connected: " + client.isConnected());
