@@ -10,4 +10,4 @@ Tool to access an FTP server file system and copy a specified file(s) and to pas
 # What I want to learn
 * How to manage URL connections
 * Understanding how connections to an outside network work and what can be done.
-
+* try to figure out git
